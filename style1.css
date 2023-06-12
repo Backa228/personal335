@@ -1,0 +1,76 @@
+body
+{
+	font-size: 18px;
+}
+
+.MainContent
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.grid-content 
+{
+	display: grid;
+	grid-template-columns: repeat(2, minmax(350px, 1fr));
+	grid-auto-rows: 400px;
+	grid-gap: 30px;
+	padding: 30px;/*внутрешний видступ*/
+}
+
+.grid-content div
+{
+	border: 2px solid black;
+	border-radius: 10px;
+	box-shadow:  -2px -2px 4px black,
+				  2px  2px 4px black;
+}
+
+.projectImg img
+{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.projectInfo
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 10px;
+}
+
+.projectImg
+{
+	
+}
+
+.projectInfo a
+{
+	text-decoration: none;
+	color: black;
+	font-size: 18px;
+}
+
+.projectInfo a:hover
+{
+	text-decoration: underline;/*робить ныжне пидкремлення*/
+}
+
+/*.projectInfo p
+{
+	font-size: 18px;
+}*/
+
+@media all and (max-width: 1024px)
+{
+	.grid-content
+	{
+		grid-template-columns: 100%;
+	}
+}

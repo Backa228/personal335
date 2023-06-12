@@ -1,0 +1,325 @@
+body
+{
+	--gold: #DBBF39;
+	--yello: #FFD500;
+	--green: #6B8A15;
+	--blue: #182D39;
+	--gold1: #F6D00F;
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	margin: 0;
+	background-color: var(--yello);
+	color: var(--blue);
+}
+
+html
+{
+	box-sizing: border-box;
+}
+
+header
+{
+	background-color: var(--green);
+	margin: 0;/*зовнишний видступ*/
+	border: 2px solid black;
+	border-radius: 10px;
+}
+
+#Andrey
+{
+	color: var(--yello);
+}
+
+.A
+{
+	margin: 0;
+}
+
+.flex
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.flex-nav img
+{
+	width: 115px;
+	margin: 13px;
+}
+
+.flex-nav ul
+{
+	display: flex;
+	list-style: none;
+	/*для даного прикладу головна вісь - горизонтальна
+    допоміжна вісь - вертикальна
+    justify-content - для горизонталі
+    align-items - для вертикалі*/
+    align-items: center;
+    justify-content: flex-end;
+    margin: 5px;
+    padding: 10px;
+}
+
+.flex-nav li
+{
+	text-align: center;
+	padding: 10px;
+	/*flex-grow: 1;/*flex-grow визначає коефіціент збільшення гнучкого елемента, по відношенню до інших гнучких елементів, всередині того ж контейнера, якщо всередині нього залишається вільний простір*/
+
+}
+
+.logo
+{
+	/*margin-right: 55%;*/
+}
+
+.flex-nav .logo img
+{
+	display: block;	
+}
+
+.flex-nav .logo h2
+{
+	display: none;
+	text-align: center;
+}
+
+.flex-nav
+{
+	display: flex;
+	justify-content: space-around;
+	padding: 15px;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.flex-nav a
+{
+	color: black;
+	text-decoration: none;
+
+}
+
+.flex-nav a:hover
+{
+	color: var(--gold);
+}
+
+.aboutMe
+{
+	width: 50%;
+	margin: 40px auto;/*значення auto вирівнює контейнер по центру*/
+	animation: flipInX;/*назва анімації*/
+	animation-duration: 2s;/*тривалість програвання анімації*/
+	animation-delay: 0.9s;/*затримка в часі*/
+	animation-iteration-count: 1;/*скільки разів буде програватись анімація infinite-безкінечно повторювати*/
+	/*animation-name: move2;
+	animation-duration: 2s;*/
+}
+
+.aboutMe img
+{
+	width: 40%;
+	border-radius: 50%;
+	background-color: var(--green);
+	border: 2px solid black;
+	animation-name: move;
+	animation-duration: 2s;
+}
+
+.a1
+{
+	width: 30%;
+}
+
+p
+{
+	font-size: 23px;
+}
+
+hr
+{
+	color: black;
+	size: 2px;
+	border: 2px solid black;
+}
+
+.skills
+{
+	display: grid;
+	grid-template-columns: repeat(2, minmax(300px, 1fr));
+	grid-gap: 30px;
+	padding: 20px 10%;
+	background-color: var(--gold1);
+}
+
+.skil
+{
+	border: 2px solid black;
+	border-radius: 10px;
+	box-shadow: 2px 2px 9px black,
+			   -2px -2px 9px black;
+	/*додаэ тінь на об ект*/
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+.skil ul
+{
+	list-style: none;/*уберает точки списка*/
+	display: flex;/*делает с обычного контейнера флекс контейнер*/
+	flex-direction: column;/*указывает напрямок головнои оси*/
+	justify-content: center;/*виривнюе элементи по головной оси*/
+	align-items: center/*виривнюе по допомижний оси*/;
+	text-align: center;/*вирівнювання тексту*/
+	padding: 5px;
+}
+
+footer
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--blue);
+	justify-content: center;
+}
+
+footer h2
+{
+	color: var(--yello);
+}
+
+.flex-nav1 ul
+{
+	display: flex;
+	list-style: none;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+}
+
+.flex-nav1 li
+{
+	padding: 10px;
+}
+
+.flex-nav1 a, .flex-nav1 i
+{
+	color: white;
+	text-decoration: none;/*приберае пидкреслення у посилань*/
+}
+
+.flex-nav1 a:hover
+{
+	color: var(--gold);
+}
+
+.flex-nav1 i:hover
+{
+	color: var(--gold);
+}
+
+.animation2
+{
+	animation-name: move;
+	animation-duration: 2s;
+	/animation-timing-function: liner;/*визначає криву швидкості анімації*/
+	animation-direction: normal;/*напрямок руху анімації 
+    alternate - кожний другий раз програє анімацію з кінця*/
+    animation-fill-mode: backwards;/*визначає, які стилі повинні застосовуватися до елементу, 
+    коли анімація не відтворюється*/
+    animation-iteration-count: 1;
+}
+
+.animation2:hover
+{
+	animation-play-state: paused;/*дозволяє включати й виключати 
+    анімацію при певних умовах, paused - ставить на паузу, 
+    none - скидує анімацію повністю*/
+}
+
+@keyframes move
+{
+	0%{
+		width: 40%;
+		border-radius: 50%;
+	}
+
+	50%{
+		width: 25%;
+		border-radius: 25%;
+	}
+
+	100%{
+		width: 40%;
+		border-radius: 50%;
+	}
+}
+
+@keyframes move2
+{
+	0%{
+		width: 50%;
+		font-size: 18px;
+	}
+
+	50%{
+		width: 30%;
+		font-size: 10px;
+	}
+
+	100%{
+		width: 50%;
+		font-size: 18px;
+	}
+}
+
+/*.aboutMe p
+{
+	animation-name: move2;
+	animation-duration: 2s;
+}*/
+
+@media all and (max-width: 1024px)
+{
+	.skills
+	{
+		grid-template-columns: repeat(1, minmax(300px, 1fr));
+	}
+
+	.aboutMe
+	{
+		width: 70%;
+	}
+
+	.flex-nav1 .info
+	{
+		flex-direction: column;
+	}
+	
+}
+
+@media all and (max-width: 700px)
+{
+	.aboutMe
+	{
+		width: 95%;
+	}
+
+	.flex-nav .logo img
+	{
+		display: none;	
+	}
+
+	.flex-nav .logo h2
+	{
+		display: block;
+	}
+
+	.flex-nav ul 
+	{
+		flex-direction: column;
+	}
+}
